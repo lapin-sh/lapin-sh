@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <title>[QA] Maksim Lapin</title>
+        <meta
+            name="description"
+            content="Personal profile of Maksim Lapin, a Software QA Engineer specializing in FinTech and high-load systems."
+        />
+
+        <link
+            rel="icon"
+            href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2280%22 fill=%22%237aa2f7%22 font-family=%22monospace%22 font-weight=%22bold%22>&gt;_</text></svg>"
+        />
+
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link
+            href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap"
+            rel="stylesheet"
+        />
+
+        <style>
+            :root {
+                --bg-main: #1a1b26;
+                --bg-terminal: #24283b;
+                --bg-header: #1f2335;
+                --color-text: #a9b1d6;
+                --color-accent: #7aa2f7;
+            }
+
+            body {
+                font-family: "JetBrains Mono", monospace;
+                background-color: var(--bg-main);
+                -webkit-font-smoothing: antialiased;
+            }
+
+            .terminal-cursor {
+                display: inline-block;
+                width: 10px;
+                height: 1.2em;
+                background-color: var(--color-accent);
+                vertical-align: middle;
+                margin-left: 4px;
+            }
+
+            .blink {
+                animation: blink-anim 0.8s infinite;
+            }
+            @keyframes blink-anim {
+                0%,
+                100% {
+                    opacity: 1;
+                }
+                50% {
+                    opacity: 0;
+                }
+            }
+
+            .first-cursor {
+                animation:
+                    blink-anim 0.8s infinite,
+                    hide-first 0.1s forwards 1.5s;
+            }
+            @keyframes hide-first {
+                to {
+                    opacity: 0;
+                    visibility: hidden;
+                }
+            }
+
+            .line-fade {
+                opacity: 0;
+                animation: fadeIn 0.2s forwards;
+            }
+            @keyframes fadeIn {
+                to {
+                    opacity: 1;
+                }
+            }
+
+            .typing-text {
+                display: inline-block;
+                overflow: hidden;
+                white-space: nowrap;
+                width: 0;
+                animation: typing-anim 1s steps(15, end) forwards 0.2s;
+            }
+            @keyframes typing-anim {
+                from {
+                    width: 0;
+                }
+                to {
+                    width: 100%;
+                }
+            }
+
+            .final-prompt-entry {
+                opacity: 0;
+                animation: fadeIn 0.1s forwards 3s;
+            }
+
+            ::selection {
+                background: #364a82;
+                color: #ff9e64;
+            }
+
+            .system-ui {
+                user-select: none;
+                cursor: default;
+                pointer-events: none;
+            }
+            .output-area {
+                user-select: text;
+                cursor: text;
+            }
+        </style>
+    </head>
+    <body
+        class="text-[#a9b1d6] min-h-screen flex items-center justify-center p-4 md:p-8"
+    >
+        <div
+            class="w-full max-w-3xl bg-[#24283b] rounded-lg shadow-2xl border border-[#414868] overflow-hidden"
+        >
+            <header
+                class="bg-[#1f2335] px-4 py-3 flex items-center justify-between border-b border-[#414868] system-ui"
+            >
+                <div class="flex gap-2">
+                    <div class="w-3 h-3 rounded-full bg-[#f7768e]"></div>
+                    <div class="w-3 h-3 rounded-full bg-[#e0af68]"></div>
+                    <div class="w-3 h-3 rounded-full bg-[#9ece6a]"></div>
+                </div>
+                <h1
+                    class="text-[11px] md:text-xs text-[#565f89] font-medium tracking-wide uppercase"
+                >
+                    Maksim Lapin – Full-Stack QA Engineer
+                </h1>
+                <div class="w-12"></div>
+            </header>
+
+            <main class="flex flex-col">
+                <div class="px-5 md:px-8 pt-5 md:pt-8 mb-6 system-ui">
+                    <div class="flex items-center gap-2">
+                        <span class="text-[#bb9af7]">guest@lapin.sh</span>
+                        <span class="text-[#7aa2f7]">~</span>
+                        <span class="text-[#cfc9c2]">$</span>
+                        <div class="inline-flex items-center">
+                            <span class="typing-text text-[#9ece6a] font-medium"
+                                >./lapin.sh</span
+                            ><span class="terminal-cursor first-cursor"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <section class="output-area px-5 md:px-8 space-y-6">
+                    <div class="line-fade" style="animation-delay: 1.5s">
+                        <h2 class="text-[#7dcfff] font-bold text-lg">
+                            Hi there, stranger!
+                        </h2>
+                    </div>
+
+                    <div
+                        class="line-fade text-[#c0caf5] max-w-2xl"
+                        style="animation-delay: 2s"
+                    >
+                        <p>
+                            I'm a Software QA Engineer with a focus on FinTech
+                            high-load systems built on microservice
+                            architecture. I deliver quality across the full
+                            stack (backend, mobile, web). Expert in API testing
+                            (REST, gRPC), localizing intermittent defects in
+                            distributed systems using logs and monitoring tools,
+                            and maintaining test infrastructure services (Go).
+                        </p>
+                    </div>
+
+                    <div
+                        class="line-fade space-y-3 pb-2"
+                        style="animation-delay: 2.5s"
+                    >
+                        <h3 class="text-[#e0af68] font-medium">
+                            Contacts & Credentials:
+                        </h3>
+                        <nav class="flex flex-col space-y-2">
+                            <a
+                                href="https://www.linkedin.com/in/maxlapin"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="group inline-flex items-center"
+                            >
+                                <span
+                                    class="text-[#565f89] group-hover:text-[#7aa2f7] transition-colors"
+                                    >[LinkedIn]</span
+                                >
+                                <span
+                                    class="ml-2 text-[#7aa2f7] border-b border-transparent group-hover:border-[#7aa2f7] transition-all"
+                                    >linkedin.com/in/maxlapin</span
+                                >
+                            </a>
+                            <a
+                                href="https://ieee-collabratec.ieee.org/app/p/maxlapin"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="group inline-flex items-center"
+                            >
+                                <span
+                                    class="text-[#565f89] group-hover:text-[#2ac3de] transition-colors"
+                                    >[IEEE Collabratec]</span
+                                >
+                                <span
+                                    class="ml-2 text-[#2ac3de] border-b border-transparent group-hover:border-[#2ac3de] transition-all"
+                                    >ieee-collabratec.ieee.org/maxlapin</span
+                                >
+                            </a>
+                            <a
+                                href="https://orcid.org/0009-0007-2646-6078"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="group inline-flex items-center"
+                            >
+                                <span
+                                    class="text-[#565f89] group-hover:text-[#9ece6a] transition-colors"
+                                    >[ORCID]</span
+                                >
+                                <span
+                                    class="ml-2 text-[#9ece6a] border-b border-transparent group-hover:border-[#9ece6a] transition-all"
+                                    >orcid.org/0009-0007-2646-6078</span
+                                >
+                            </a>
+                            <a
+                                href="mailto:maksim@lapin.sh"
+                                class="group inline-flex items-center"
+                            >
+                                <span
+                                    class="text-[#565f89] group-hover:text-[#f7768e] transition-colors"
+                                    >[Email]</span
+                                >
+                                <span
+                                    class="ml-2 text-[#f7768e] border-b border-transparent group-hover:border-[#f7768e] transition-all"
+                                    >maksim@lapin.sh</span
+                                >
+                            </a>
+                        </nav>
+                    </div>
+                </section>
+
+                <div
+                    class="final-prompt-entry px-5 md:px-8 pb-5 md:pb-8 pt-6 system-ui"
+                >
+                    <div class="flex items-center gap-2">
+                        <span class="text-[#bb9af7]">guest@lapin.sh</span>
+                        <span class="text-[#7aa2f7]">~</span>
+                        <span class="text-[#cfc9c2]">$</span>
+                        <span class="terminal-cursor blink"></span>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </body>
+</html>
