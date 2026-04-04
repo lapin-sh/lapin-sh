@@ -5,6 +5,6 @@ I'm a Software QA Engineer focused on FinTech high-load systems built on microse
 ---
 
 ### 🔗 Connect & Details:
-- **Website:** [lapin.sh](https://lapin.sh)
+- **Website:** [lapin.sh](https://lapin.sh/?ref=github)
 - **LinkedIn:** [linkedin.com/in/maxlapin](https://linkedin.com/in/maxlapin)
 - **Email:** [maksim@lapin.sh](mailto:maksim@lapin.sh)
